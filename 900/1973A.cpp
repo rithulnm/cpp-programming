@@ -11,6 +11,5 @@ int main(){
         if ((((((p3%2)+p2)%2)+p1)%2) == 0){
 
         }
-
     }
 }/////didnt solve it come back to it later.
