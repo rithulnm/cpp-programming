@@ -9,24 +9,12 @@ int main(){
     int X,Y,M;
     fin >> X >> Y >> M;
 
-    int i=0; int j=0;
-    int tot;
-    while (true){
-        int tot = X*i + Y*j;
-        i++;
-        j++;
-        if (X*i > M){
-            i--;
-        }
-        if (Y*j > M){
-            j--;
-        }
-        if (tot > M){
-            tot = X*(i-1) + Y*(j-1);
-            break;
-            
+    int best = 0;
+    for (int a=0; (a*X)<=M; a++){
+        for (int b=0; (a*X + b*Y)<=M; b++){
+            best = max(best,a*X + b*Y);
         }
     }
 
-    fout << tot << '\n';
+    fout << best << '\n';
 }
