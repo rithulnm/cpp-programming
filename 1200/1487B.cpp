@@ -5,22 +5,17 @@ using ll = long long;
 
 void solve(){
     ll n, k;
-    ll ans;
     cin >> n >> k;
 
-    if (n%2 == 0){
-        ans = k;
-        return;
-    }
-    else{
-        ans  = k%((n+1)/2);
-    }
+    ll s = (n%2 == 0) ? 0: (k-1)/((n-1)/2);
+    ll ans = (k-1+s)%n + 1;
+    cout << ans << '\n';
     
 }
 
 int main(){
-    /*ios::sync_with_stdio(false);
-    cin.tie(NULL);*/
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
 
     int t;
     cin >> t;
